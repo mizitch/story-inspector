@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="reportSpecEditPane" minWidth="300.0" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.story_inspector.controllers.ReportSpecEditPaneController">
+   <stylesheets>
+   	<URL value="@../styles/styles.css" />
+   </stylesheets>
+   <children>
+      <Label text="Report Name:">
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="nameTextField">
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </VBox.margin>
+      </TextField>
+      <Label text="Report Description:">
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </VBox.margin>
+      </Label>
+      <TextArea fx:id="descriptionTextArea" prefHeight="42.0" wrapText="true">
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </VBox.margin>
+      </TextArea>
+      <Button mnemonicParsing="false" onAction="#addSection" text="New Section">
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </VBox.margin>
+      </Button>
+      <TabPane fx:id="reportSectionsTabPane" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

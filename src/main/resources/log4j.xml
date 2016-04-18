@@ -10,7 +10,7 @@
         </layout>
     </appender>
 
-    <logger name="com.mitchellshanklin.storyInspector">
+    <logger name="com.story_inspector">
         <level value="DEBUG"/>
     </logger>
 

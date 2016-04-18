@@ -1,34 +1,130 @@
-/* Application wide styles */
 
 .label {
     -fx-font-size: 12px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #333333;
-    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+.validation-message {
+	-fx-text-fill: red;
+	-fx-font-weight: bold;
 }
 
-.button {
-    -fx-text-fill: white;
-    -fx-font-family: "Arial Narrow";
-    -fx-font-weight: bold;
-    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+.invalidated-control {
+	-fx-border-color: red;
+	-fx-border-width: 2;
+	-fx-border-radius: 3;
 }
 
-.button:hover{
-    -fx-base: #395bae;
+.drag-hover-list-item-bottom {
+	-fx-border-width: 0 0 1 0;
+	-fx-border-color: blue;
 }
 
-/* Component specific styles */
-
-
-.main-panel {
-    -fx-background-image: url("../images/background.jpg");
+.drag-hover-list-item-top {
+	-fx-border-width: 1 0 0 0;
+	-fx-border-color: blue;
 }
 
-.hello-message {
-    -fx-text-fill: #AA0000;
-    -fx-font-weight: bold;
-    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+.summary-key {
+	-fx-font-weight: bold;
 }
 
+.summary-value {
+	-fx-text-fill: blue;
+}
+
+.document-label {
+	
+}
+
+
+.document-name-label {
+	-fx-text-fill: dark-gray;
+	-fx-font-style: italic;
+}
+
+
+.report-results-label {
+    -fx-font-size: 20px;
+	-fx-font-weight: bold;
+}
+
+
+.report-name {
+    -fx-font-size: 18px;
+	-fx-font-weight: bold;
+}
+
+
+.report-description {
+	
+}
+
+.report-tab-description {
+	
+}
+
+.analyzer-name {
+	-fx-font-weight: bold;
+}
+
+.analyzer-description {
+	
+}
+
+.select-report {
+    -fx-font-size: 24px;
+	-fx-font-weight: bold;
+	-fx-text-fill: darkblue;
+}
+
+.select-story {
+    -fx-font-size: 24px;
+	-fx-font-weight: bold;
+	-fx-text-fill: darkgreen;
+}
+
+.inspect-button {
+	-fx-font-size: 15px;
+	-fx-font-weight: bold;
+}
+
+.story-format-disclaimer {
+	-fx-font-style: italic;
+	-fx-text-fill: gray;
+}
+
+.report-spec-edit-pane-bottom-bar {
+	-fx-background-color: lightgray;
+}
+
+.progress-title-label {
+	-fx-font-size: 15px;
+}
+
+.progress-report-name-label {
+	-fx-font-size: 15px;
+	-fx-font-weight: bold;
+	-fx-text-fill: darkblue
+}
+
+.progress-story-name-label {
+	-fx-font-size: 15px;
+	-fx-font-weight: bold;
+	-fx-text-fill: darkgreen
+}
+
+.progress-percentage-label {
+	-fx-font-weight: bold;
+}
+
+.progress-description-label {
+	-fx-font-style: italic;
+	-fx-text-fill: gray;
+}
+
+.main-page-field-label {
+	-fx-font-weight: bold;
+}
+
+.report-metadata-label {
+	-fx-font-style: italic;
+}

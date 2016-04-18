@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox prefWidth="700.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.story_inspector.controllers.MainPageController">
+   <stylesheets>
+   	<URL value="@../styles/styles.css" />
+   </stylesheets>
+   <children>
+      <HBox VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefWidth="400.0" spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="TOP_CENTER">
+                     <children>
+                        <Label styleClass="select-report" text="Select Report">
+                           <graphic>
+                              <ImageView fx:id="selectReportCheckboxImageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/unchecked_check_box_transparent.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label styleClass="main-page-field-label" text="Report Name: " />
+                        <Label fx:id="reportNameLabel" />
+                     </children>
+                  </HBox>
+                  <Label styleClass="main-page-field-label" text="Report Description:" />
+                  <Label fx:id="reportDescriptionLabel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" minHeight="42.0" wrapText="true" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="reportMetadataLabel" styleClass="report-metadata-label" />
+                  <ButtonBar buttonOrder="O">
+                    <buttons>
+                        <Button mnemonicParsing="false" onAction="#newReport" text="New Report" ButtonBar.ButtonData="OK_DONE" />
+                      	<Button fx:id="editButton" disable="true" mnemonicParsing="false" onAction="#editReport" text="Edit Report" ButtonBar.ButtonData="OK_DONE" />
+                        <Button mnemonicParsing="false" onAction="#openReport" text="Open Report" ButtonBar.ButtonData="OK_DONE" />
+                    </buttons>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ButtonBar>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <Separator orientation="VERTICAL" />
+            <VBox prefWidth="400.0" spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="TOP_CENTER">
+                     <children>
+                        <Label styleClass="select-story" text="Select Story">
+                           <graphic>
+                              <ImageView fx:id="selectStoryCheckboxImageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/unchecked_check_box_transparent.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label styleClass="main-page-field-label" text="Document Name: " />
+                        <Label fx:id="documentNameLabel" />
+                     </children>
+                  </HBox>
+                  <VBox VBox.vgrow="ALWAYS" />
+                  <TextFlow maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="350.0" textAlignment="CENTER">
+                     <children>
+                        <Label styleClass="story-format-disclaimer" text="Stories should be in" wrapText="true" />
+                        <Hyperlink onAction="#standardManuscriptFormat" text="standard manuscript format," wrapText="true">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Hyperlink>
+                        <Label styleClass="story-format-disclaimer" text="and should not contain comments or revision data." wrapText="true">
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </Label>
+                        <Label styleClass="story-format-disclaimer" text="Currently, only .DOCX files are supported." />
+                     </children>
+                  </TextFlow>
+                  <ButtonBar buttonOrder="O">
+                    <buttons>
+                      <Button mnemonicParsing="false" onAction="#selectStory" text="Select Story" ButtonBar.ButtonData="OK_DONE" />
+                    </buttons>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ButtonBar>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      <ButtonBar buttonOrder="I">
+        <buttons>
+          <Button fx:id="inspectButton" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#inspect" styleClass="inspect-button" text="Inspect!" ButtonBar.ButtonData="FINISH" />
+        </buttons>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </ButtonBar>
+   </children>
+</VBox>

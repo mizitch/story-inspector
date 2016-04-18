@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root spacing="5.0" type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <Label fx:id="nameLabel" text="Name: ">
+      <tooltip>
+         <Tooltip fx:id="nameLabelTooltip" text="Empty Tooltip" />
+      </tooltip></Label>
+      <ChoiceBox fx:id="choiceBox" prefWidth="150.0">
+      <tooltip>
+         <Tooltip fx:id="choiceBoxTooltip" text="Empty Tooltip" />
+      </tooltip></ChoiceBox>
+</fx:root>

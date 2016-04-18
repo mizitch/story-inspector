@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root spacing="5.0" type="VBox" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <CheckBox fx:id="checkBox" mnemonicParsing="false" text="CheckBox">
+         <tooltip>
+            <Tooltip fx:id="checkBoxTooltip" text="Empty Tooltip" />
+         </tooltip>
+      </CheckBox>
+   </children>
+</fx:root>

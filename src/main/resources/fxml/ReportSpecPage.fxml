@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="reportSpecPage" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.story_inspector.controllers.ReportSpecPageController">
+	<stylesheets>
+   	<URL value="@../styles/styles.css" />
+   </stylesheets>
+   <children>
+		<fx:include source="ReportSpecMainMenuBar.fxml" />
+		
+		
+      <SplitPane fx:id="splitPane" dividerPositions="0.5" VBox.vgrow="ALWAYS">
+        <items>
+          <fx:include source="ReportSpecEditPane.fxml" />
+          <fx:include source="AnalyzerPane.fxml" />
+        </items>
+      </SplitPane>
+      <ButtonBar styleClass="report-spec-edit-pane-bottom-bar">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#useReport" text="Use Report" ButtonBar.ButtonData="RIGHT" />
+        </buttons>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </ButtonBar>
+	</children>
+</VBox>

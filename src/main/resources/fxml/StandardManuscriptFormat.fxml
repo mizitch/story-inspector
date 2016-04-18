@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox spacing="5.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.story_inspector.controllers.StandardManuscriptFormatController">
+   <children>
+      <TextFlow prefWidth="600.0">
+         <children>
+            <Label text="See" />
+            <Hyperlink onAction="#standardManuscriptFormat" text="http://www.shunn.net/format/story.html" />
+            <Label text="for an example of standard manuscript format." />
+         </children>
+      </TextFlow>
+      <Label text="Story Inspector does not require perfect manuscript format (it doesn't care at all about font, for example). Here is what it does care about:">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" top="10.0" />
+         </padding></Label>
+      <Label text="• Centered text is either a title, by line or chapter title. Such text will not be analyzed, but will be used to break up your document into chapters." />
+      <Label text="• The first instance of centered text is your story's title." />
+      <Label text="• The by line immediately follows the title, is centered and contains the text &quot;by &quot;" />
+      <Label text="• Subsequent centered text is assumed to be chapter titles." />
+      <Label text="• All (non-centered) text before the title is asumed to be contact information or other metadata and is ignored." />
+      <Label text="• All non-centered text following the title and by line is assumed to be part of your story text." />
+      <Label text="• A lone '#' symbol on a line represents a scene break." />
+      <Label text="• Any text in headers, footers, text boxes, images, tables or other fancy word processor entities is ignored." />
+      <Label text="• Any text within double quotes (&quot;&quot;) is assumed to be dialogue." />
+      <Label text="• Multi-paragraph dialogue is signified by ending a paragraph without a closing quote and beginning the next paragraph with an opening quote." />
+      <Label text="• Your document cannot contain any comments or revision data." />
+      <ButtonBar>
+        <buttons>
+          <Button fx:id="okayButton" mnemonicParsing="false" onAction="#closeWindow" text="Okay" ButtonBar.ButtonData="OK_DONE" />
+        </buttons>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </ButtonBar>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
